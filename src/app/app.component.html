@@ -123,10 +123,15 @@
           <label for="inputName">Employee Name</label>
           <input
             [(ngModel)]="employee.name"
+            #name="ngModel"
             name="employeeName"
             type="text"
             class="form-control"
             id="inputName"
+            required
+            [ngClass]="{
+              'is-invalid': name.invalid && (name.dirty || name.touched)
+            }"
           />
         </div>
         <div class="form-group col-md-3">
@@ -213,6 +218,7 @@
           (click)="calculateDeductions()"
           type="button"
           class="btn btn-primary mt-5"
+          [disabled]="name.invalid"
         >
           Calculate deductions
         </button>

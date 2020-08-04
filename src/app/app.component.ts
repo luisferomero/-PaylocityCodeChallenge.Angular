@@ -9,12 +9,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-
-
   constructor(private httpClient: HttpClient) {
-
-
   }
 
   employee: employee = { name: "", salary: 52000, costOfBenefits: 1000, dependents: new Array<dependent>() };
