@@ -29,6 +29,8 @@ export class AppComponent {
     employeeAnnualPayAfterDeductions: 0
   };
 
+  dependentTypes = [{ value: 1, description: "Child" }, { value: 2, description: "Spouse" }];
+
   showTable = false;
 
   addDependent() {
